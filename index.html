@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>IP Tracker | Conte Lautaro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.scss" />
+
+    <!--leaflet map-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+  </head>
+  <body class="sm:container">
+    <main>
+      <form class="form">
+        <section class="IpInputContainer">
+          <h1 id="title">Geolocalizar IP</h1>
+          <div class="inputSection">
+            <input
+              autofocus
+              id="ipInput"
+              class="ipInput"
+              type="text"
+              placeholder="Ingrese IP"
+            />
+            <button type="button" id="ipInputSumbit"></button>
+          </div>
+        </section>
+
+        <div class="resultContainer">
+          <section class="returnedResults">
+            <h2>Dirección IP</h2>
+            <textarea name="results"cols="30" rows="2" id="ipAdress" disabled  class="resultInputs" placeholder="-"></textarea>
+          </section>
+
+          <section class="returnedResults">
+            <h2>Ubicación</h2>
+            <textarea name="results"cols="30" rows="2" id="location" disabled  class="resultInputs" placeholder="-"></textarea>
+          </section>
+
+          <section class="returnedResults">
+            <h2>Zona Horaria</h2>
+            <textarea name="results"  cols="30" rows="2" id="timezone" disabled  class="resultInputs" placeholder="-"></textarea>
+          </section>
+
+          <section class="returnedResults">
+            <h2>ISP</h2>
+            <textarea name="results"  cols="30" rows="2" id="isp" disabled  class="resultInputs" placeholder="-"></textarea>
+          </section>
+        </div>
+      </form>
+      <div id="mapid" class="mapID"></div>
+      <a  href="#title" class="goToTop"></a>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

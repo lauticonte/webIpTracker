@@ -1,0 +1,242 @@
+// Front-end Style Guide
+
+//? Layout
+
+
+//? Colors
+
+    $color-gradient-start: hsl(192, 100%, 67%);
+    $color-gradient-end: hsl(280, 87%, 65%);
+    $color-very-dark-blue: hsl(235, 21%, 11%);
+    $color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    $color-dark-light-grayish-blue: hsl(234, 39%, 85%);
+    $color-dark-light-grayish-blue-hover: hsl(236, 33%, 92%);
+    $color-dark-dark-grayish-blue: hsl(234, 11%, 52%);
+    $color-dark-very-dark-grayish-blue: hsl(233, 14%, 35%);
+    $color-dark-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+
+    $veryDarkGray: hsl(210, 100%, 0%);
+    $darkGray: hsl(0, 0%, 59%);
+    $titleAndBgColor: white;
+
+
+//? Padding and margin and border-radius
+
+    $varBorderRadius:2rem;
+    $varPaddingOne:1rem;
+    $varPaddingOneFive:1.5rem;
+    $varPaddingTwo: 2rem;
+    $varPaddingThree:3rem;
+ 
+//? Font
+    
+    $fontWeightNormal: 400;
+    $fontWeightFiveHundered:500;
+    $fontWeightBold:700;
+
+    $fontsizeTitle:2.6rem;
+    $fontsizeSmall:1rem;
+    $fontsizeBig:2rem;
+    $fontsizeNormal:1.4rem;
+    $fontSizeTextInput: 1.8rem;
+
+    
+*, *::after,*::before { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+html { 
+    font-size: 10px;
+    min-height: 150vh;
+    scroll-behavior: smooth;
+
+    body { 
+        overflow: hidden;
+        min-height: inherit;
+        main   { 
+            display: flex;
+            flex-direction: column;
+            min-height: inherit;
+
+
+            .form { 
+                flex-grow: 0;
+                z-index: 10;
+                background-image: url(/images/pattern-bg.jpg);
+                background-size: cover;
+                height: 30rem;
+
+            .IpInputContainer { 
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                color: $titleAndBgColor;
+                padding: $varPaddingTwo;
+                h1  { 
+                    padding: $varPaddingTwo;
+                    font-size: $fontsizeTitle;
+                font-weight: $fontWeightFiveHundered;
+                }
+
+                .inputSection { 
+                    width: 100%;
+                    display: flex;
+                    border-radius: $varBorderRadius;
+                    overflow: hidden;
+
+                    .ipInput { 
+                        flex-basis: 100%;
+                        padding: $varPaddingOneFive;
+                        font-size: $fontSizeTextInput;
+                        background-color: $color-dark-very-dark-grayish-blue;
+                        box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+                        border-width: 0px;
+                        color: white;
+
+                            &:focus-visible { 
+                                outline: none;
+                            }
+                        }
+                        .placeholderRed::placeholder { 
+                                color: red;
+                        }
+                        button{
+                            border: none;
+                            background-color: $color-gradient-end;
+                            padding: $varPaddingTwo $varPaddingThree;
+                            background-image: url(/images/icon-arrow.svg);
+                            background-repeat:no-repeat;
+                            background-position: center;
+                            transition: 0.2s ease-in-out;
+                            cursor: pointer;
+                            &:hover { 
+                                
+                                background-color: $darkGray;
+                            }
+                        }
+                }
+            }
+            .resultContainer { 
+                background-color: $color-dark-very-dark-grayish-blue;
+                box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 $varPaddingTwo;
+                padding: 0  $varPaddingTwo $varPaddingTwo;
+                border-radius:$varBorderRadius ;
+                .returnedResults { 
+                    text-align: center;
+                    border: none;
+                    width: 100%;
+                    &:first-child { 
+                        padding-top: $varPaddingTwo;
+                    }
+
+                    h2 { 
+                        color: $color-gradient-start;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2rem;
+                        font-size: $fontsizeSmall;
+                        padding: 0 0 $varPaddingOne 0;
+                    }
+                    .resultInputs { 
+                        
+                        resize: none;
+                        text-align: center;
+                        border: none;
+                        font-size: $fontSizeTextInput;
+                        width: 100%;
+                        font-weight: $fontWeightFiveHundered;
+                        &:disabled { 
+                            background-color: $color-dark-very-dark-grayish-blue;
+                            color: white;
+                        }
+                    }
+                }
+            }
+           }
+
+           .mapID {
+            flex-grow:1 ;
+            z-index: 0;
+            }
+
+            .goToTop { 
+                z-index: 100;
+                position: fixed;
+                border: none;
+                background-color: $veryDarkGray;
+                padding:  $varPaddingThree;
+                background-image: url(/images/icon-arrow.svg);
+                background-repeat:no-repeat;
+                background-position: center;
+                transition: 0.2s ease-in-out;
+                transform: rotateZ(-90deg);
+                border-radius: 50%;
+                cursor: pointer;
+                bottom: 1rem;
+                right: 1rem;
+                &:hover { 
+                    
+                    background-color: $darkGray;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen  and (min-width:1050px) {
+
+    html { 
+      
+    
+        body { 
+            main   { 
+              
+    
+    
+                .form { 
+                   
+                    height: 24rem;
+                .IpInputContainer { 
+                    margin: 0 20%;
+                }
+                .resultContainer { 
+                    padding: $varPaddingThree $varPaddingTwo ;
+                   flex-direction: row;
+                   align-items: flex-start;
+                   min-height: 13rem;
+                   margin: 0 10% ;
+                   .returnedResults { 
+                       text-align: left;
+                        border-right: 1px solid $darkGray;
+                        margin:0 $varPaddingOne;
+                        padding: $varPaddingOne;
+
+                        h2 { 
+                            padding-top: 0;
+                            font-size: $fontsizeNormal;
+                        }
+                        .resultInputs { 
+                            text-align: left;
+                            font-size: $fontsizeBig;
+                        }
+                    }
+                    .returnedResults:last-child { 
+                        border: none;
+                    }
+
+                }
+               }
+    
+               
+            }
+        }
+    }
+    
+}
