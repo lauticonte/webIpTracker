@@ -1,0 +1,169 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  min-height: 150vh;
+  scroll-behavior: smooth;
+}
+html body {
+  overflow: hidden;
+  min-height: inherit;
+}
+html body main {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+}
+html body main .form {
+  flex-grow: 0;
+  z-index: 10;
+  background-image: url(/images/pattern-bg.jpg);
+  background-size: cover;
+  height: 30rem;
+}
+html body main .form .IpInputContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 2rem;
+}
+html body main .form .IpInputContainer h1 {
+  padding: 2rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+html body main .form .IpInputContainer .inputSection {
+  width: 100%;
+  display: flex;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+html body main .form .IpInputContainer .inputSection .ipInput {
+  flex-basis: 100%;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  background-color: #4d5066;
+  box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  border-width: 0px;
+  color: white;
+}
+html body main .form .IpInputContainer .inputSection .ipInput:focus-visible {
+  outline: none;
+}
+html body main .form .IpInputContainer .inputSection .placeholderRed::placeholder {
+  color: red;
+}
+html body main .form .IpInputContainer .inputSection button {
+  border: none;
+  background-color: #c058f3;
+  padding: 2rem 3rem;
+  background-image: url(/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+html body main .form .IpInputContainer .inputSection button:hover {
+  background-color: #969696;
+}
+html body main .form .resultContainer {
+  background-color: #4d5066;
+  box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+  padding: 0 2rem 2rem;
+  border-radius: 2rem;
+}
+html body main .form .resultContainer .returnedResults {
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+html body main .form .resultContainer .returnedResults:first-child {
+  padding-top: 2rem;
+}
+html body main .form .resultContainer .returnedResults h2 {
+  color: #57ddff;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  padding: 0 0 1rem 0;
+}
+html body main .form .resultContainer .returnedResults .resultInputs {
+  resize: none;
+  text-align: center;
+  border: none;
+  font-size: 1.8rem;
+  width: 100%;
+  font-weight: 500;
+}
+html body main .form .resultContainer .returnedResults .resultInputs:disabled {
+  background-color: #4d5066;
+  color: white;
+}
+html body main .mapID {
+  flex-grow: 1;
+  z-index: 0;
+}
+html body main .goToTop {
+  z-index: 100;
+  position: fixed;
+  border: none;
+  background-color: black;
+  padding: 3rem;
+  background-image: url(/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s ease-in-out;
+  transform: rotateZ(-90deg);
+  border-radius: 50%;
+  cursor: pointer;
+  bottom: 1rem;
+  right: 1rem;
+}
+html body main .goToTop:hover {
+  background-color: #969696;
+}
+
+@media only screen and (min-width: 1050px) {
+  html body main .form {
+    height: 24rem;
+  }
+  html body main .form .IpInputContainer {
+    margin: 0 20%;
+  }
+  html body main .form .resultContainer {
+    padding: 3rem 2rem;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 13rem;
+    margin: 0 10%;
+  }
+  html body main .form .resultContainer .returnedResults {
+    text-align: left;
+    border-right: 1px solid #969696;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  html body main .form .resultContainer .returnedResults h2 {
+    padding-top: 0;
+    font-size: 1.4rem;
+  }
+  html body main .form .resultContainer .returnedResults .resultInputs {
+    text-align: left;
+    font-size: 2rem;
+  }
+  html body main .form .resultContainer .returnedResults:last-child {
+    border: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,10 @@
-import 'regenerator-runtime/runtime'
-
-
 const ipInput = document.getElementById("ipInput");
 const ipInputSubmit = document.getElementById("ipInputSumbit");
 
-const disbaledTextareaIpAdress = document.getElementById("ipAdress")
-const disbaledTextareaLocation = document.getElementById("location")
-const disbaledTextareaTimezone = document.getElementById("timezone")
-const disbaledTextareaIsp = document.getElementById("isp")
+const disabledTextareaIpAdress = document.getElementById("ipAdress")
+const disabledTextareaLocation = document.getElementById("location")
+const disabledTextareaTimezone = document.getElementById("timezone")
+const disabledTextareaIsp = document.getElementById("isp")
 
 let ipInputValue;
 let info = {
@@ -73,10 +70,10 @@ ipInputSubmit.addEventListener("click", async () => {
 })
 
 const onload = () => {
-    disbaledTextareaIpAdress.innerHTML = info.ip;
-    disbaledTextareaIsp.innerHTML = info.isp;
-    disbaledTextareaLocation.innerHTML = `${info.location.region} ${info.location.country} `
-    disbaledTextareaTimezone.innerHTML = `UTC ${info.location.timezone}`
+    disabledTextareaIpAdress.innerHTML = info.ip;
+    disabledTextareaIsp.innerHTML = info.isp;
+    disabledTextareaLocation.innerHTML = `${info.location.region} ${info.location.country} `
+    disabledTextareaTimezone.innerHTML = `UTC ${info.location.timezone}`
     map.setView([info.location.lat, info.location.lng], 13)
     markerOnTheMap.setLatLng([info.location.lat, info.location.lng])
 
