@@ -6,6 +6,24 @@ const disabledTextareaLocation = document.getElementById("location")
 const disabledTextareaTimezone = document.getElementById("timezone")
 const disabledTextareaIsp = document.getElementById("isp")
 
+function alerta()
+    {
+    let mensaje;
+    let opcion = confirm("Podemos ver su IP?");
+    if (opcion == true) {
+        $.getJSON("https://api.ipify.org?format=jsonp&callback=?", function(data){
+        let hola;
+        hola = data.ip;
+        $('input.ipInput').val(hola);
+        let ipInputValue = $('input.ipInput').val();
+        });
+	} else {
+	    alert('No nos dio permiso.')
+	}
+};
+
+setTimeout(alerta, 1000);
+
 let ipInputValue;
 let info = {
     "ip": "192.212.174.101",
