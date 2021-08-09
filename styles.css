@@ -147,6 +147,10 @@ html body main .goToTop:hover {
     min-height: 13rem;
     margin: 0 10%;
   }
+  html body main .form .resultContainer .returnedResults .resultInputs:disabled {
+    background-color: #4d5066;
+    color: white;
+}
   html body main .form .resultContainer .returnedResults {
     text-align: left;
     border-right: 1px solid #969696;
@@ -165,5 +169,3 @@ html body main .goToTop:hover {
     border: none;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
